@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<meta charset="utf-8">
+            <title>Intro To Bitcoin</title>
+           </head>
+
+     <style>
+     h1{
+     color: black;
+     }
+body{
+  margin: 0;
+  font-style: American Typewriter, serif;
+  background-image: url(https://media.npr.org/assets/img/2022/06/20/gettyimages-887657568-2ef5a2819edde09f85941e2e446a02ffa62dd79d-s1100-c50.jpg);
+}
+
+a {
+  color: #282C34 ;
+}
+
+/* header */
+
+.header {
+  background-color: #F5F5F5 ;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #F5F5F5;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #282C34 ;
+  text-decoration: none;
+  color: 282C34;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4 ;
+ 
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  color: #F2A900;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #282C34 ;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #282C34 ;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+     </style>
+     
+ <body>
+ 
+<header class="header">
+  <a href="" class="logo">Introduction to Bitcoin</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="link">Basics</a></li>
+    <li><a href="link">Market</a></li>
+    <li><a href="link">Wallets</a></li>
+    <li><a href="link">Exchanges</a></li>
+  </ul>
+</header>
+       </html>
